@@ -248,7 +248,7 @@ export default function App() {
           </Picker>
         </View>
         <TouchableOpacity style={styles.addButton} onPress={addTask}>
-          <Text style={styles.addButtonText}>+</Text>
+          <Text style={styles.addButtonText}></Text>
         </TouchableOpacity>
       </View>
 

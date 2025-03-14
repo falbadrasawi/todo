@@ -1,17 +1,21 @@
 {
-  "name": "todo",
+  "homepage": "https://falbadrasawi.github.io/todo",
+  "name": "reacttodo",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "build": "npx expo export --output-dir web",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d web"
   },
   "dependencies": {
     "@expo/metro-runtime": "~4.0.1",
     "@react-native-community/datetimepicker": "^8.2.0",
-    "@react-native-picker/picker": "^2.11.0",
+    "@react-native-picker/picker": "2.9.0",
     "@rneui/base": "^4.0.0-rc.7",
     "@rneui/themed": "^4.0.0-rc.8",
     "expo": "~52.0.38",
@@ -23,7 +27,9 @@
     "react-native-web": "~0.19.13"
   },
   "devDependencies": {
-    "@babel/core": "^7.20.0"
+    "@babel/core": "^7.20.0",
+    "gh-pages": "^6.3.0"
   },
   "private": true
 }
+
