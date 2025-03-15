@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
   },
   addButtonText: {
     fontSize: 24,
-    color: '#fff',
+    color: 'white',
   },
   picker: {
     width: 120,
@@ -248,7 +248,7 @@ export default function App() {
           </Picker>
         </View>
         <TouchableOpacity style={styles.addButton} onPress={addTask}>
-          <Text style={styles.addButtonText}></Text>
+          <Text style={styles.addButtonText}>Add</Text>
         </TouchableOpacity>
       </View>
 
