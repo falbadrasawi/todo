@@ -3,11 +3,10 @@ const path = require('path');
 module.exports = {
   webpack: {
     alias: {
-      // Map react-native to react-native-web
       'react-native$': 'react-native-web'
     },
     configure: (webpackConfig) => {
-      // Add a new rule to transpile react-native-ratings (and its JSX)
+      // Add a rule to transpile react-native-ratings (if needed)
       webpackConfig.module.rules.push({
         test: /\.(js|mjs|jsx)$/,
         include: [
@@ -16,7 +15,6 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            // Ensure we transpile JSX
             presets: ['@babel/preset-react']
           }
         }
@@ -28,4 +26,3 @@ module.exports = {
     presets: ['@babel/preset-react']
   }
 };
-
